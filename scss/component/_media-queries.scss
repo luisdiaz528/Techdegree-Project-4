@@ -1,0 +1,49 @@
+// Media Quieres -------------------------- /
+@include mq-desktop($break) {
+  .row {
+    flex-direction: row;
+  }
+
+  .container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+      
+    &-link {
+      flex-basis: 100px;
+    } 
+  }
+
+  [class^=col] {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  [class^=col] + [class^=col] {
+    margin-left: $general-spacing;
+  }
+
+  .btn {
+    margin-left: $general-spacing;
+  }
+  
+  
+  @include column-widths;
+  
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+}

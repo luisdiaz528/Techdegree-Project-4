@@ -1,0 +1,23 @@
+@mixin mq-desktop($break) {
+    @media (min-width: $break) {
+      @content;
+    }
+}
+
+@mixin column-widths {
+  @for $i from 1 through $number-of-columns {
+    .col-#{$i} {
+      $j: 100 / $number-of-columns * $i;
+      $k: decimal-round($j, 2, round);
+      flex-basis: $k * 1%;
+    }
+  }
+}
+
+@mixin column-theme-colors {
+  @for $i from 1 through $number-of-columns {
+    &-#{$i} {
+      background-color: nth($column-colors, $i);
+    }
+  }
+}

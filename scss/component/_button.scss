@@ -1,0 +1,46 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+$buttons: 
+    'default' $light-blue,
+    'error' #e4757a,
+    'info' #927bc1,
+    'success' #63cc82,
+    'warning' $light-tomato;
+
+$name: 'default',
+        'error',
+        'info',
+        'success',
+        'warning';
+
+$color: '$light-blue',
+        '#e4757a',
+        '#927bc1',
+        '#63cc82',
+        '$light-tomato';
+
+
+
+@each $name, $color in $buttons {
+    .#{$name} {
+        background-color: $color;
+
+
+        &:hover {
+        background-color: lighten($color, $lighten-amount);
+        }
+    } 
+}
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $white;
+    border: none;
+    padding: $general-spacing 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+  

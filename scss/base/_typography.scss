@@ -1,0 +1,49 @@
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+* {
+    font-family: 'Lato', sans-serif;
+    color: $gray;
+    box-sizing: border-box;
+}
+  
+p {
+    line-height: 1.45em;
+}
+  
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.headline {
+    &-primary {
+    color: $turquoise;
+    margin-left: $general-spacing;
+    }
+    
+    &-secondary {
+        color: $gray;
+        font-weight: 300;
+    }
+}
+  
+
+  
+.link {
+    color: $light-blue;
+    font-weight: 700;
+}
+  
+.blockquote {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $turquoise;
+    border-radius: 5px;
+}
